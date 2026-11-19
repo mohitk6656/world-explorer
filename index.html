@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Country Explorer</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌍 Country Explorer</h1>
+    <p>Explore countries around the world</p>
+  </header>
+
+  <main>
+
+    <section class="controls">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a country..."
+      >
+
+      <select id="regionFilter">
+        <option value="all">All Regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+        <option value="Polar">Polar</option>
+      </select>
+
+      <select id="sortPopulation">
+        <option value="default">Sort by Population</option>
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+
+    </section>
+
+    <p id="countryCount">Loading countries...</p>
+
+    <section id="countryContainer" class="country-grid">
+      <p class="no-results">Loading countries...</p>
+    </section>
+
+  </main>
+
+
+  
+
+  <div id="countryModal" class="modal">
+
+    <div class="modal-content">
+
+      <button id="closeModal" class="close-btn" aria-label="Close">
+        &times;
+      </button>
+
+      <div id="countryDetails"></div>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
